@@ -8,6 +8,10 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import AboutUs from './Pages/AboutUs';
+import Services from './Pages/Services';
+import ContactUs from './Pages/ContactUs';
+import FAQs from './Pages/FAQs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +19,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
+        <Route path="/AboutUs" element={<AboutUs/>}></Route>
+        <Route path="/Services" element={<Services/>}></Route>
+        <Route path="/ContactUs" element={<ContactUs/>}></Route>
+        <Route path="/FAQs" element={<FAQs/>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

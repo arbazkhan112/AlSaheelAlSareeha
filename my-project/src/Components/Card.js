@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Card = ({heading, paragraph}) => {
+const Card = ({heading, paragraph, icon}) => {
     return (
         <>
-            <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">{heading}</h5>
+            <a  class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"><div className='flex  items-center gap-4'>{icon}{heading}</div></h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">{paragraph}</p>
             </a>
 

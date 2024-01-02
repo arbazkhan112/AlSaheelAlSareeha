@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { GoClockFill } from "react-icons/go";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+
 
 const Footer = () => {
     return (
@@ -14,14 +16,14 @@ const Footer = () => {
             <footer class="bg-white dark:bg-gray-900">
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div class="md:flex md:justify-between">
-                        <div class="mb-6 md:mb-0">
+                        <div class="mb-6 pr-8 md:mb-0">
                             <Link to="/" className='flex flex-col items-center'>
                                 <img src={logo} class="h-12 me-3" alt="Logo" />
                                 <span class="self-center text-2xl font-semibold border-b-2 border-[#F58E22] whitespace-nowrap dark:text-white">AL SAHEL AL SAREEHA</span>
                             </Link>
                         </div>
-                        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
-                            <div>
+                        <div class="grid grid-cols-1  sm:grid-cols-2  ">
+                            <div className='border-[#F58E22] border-l-2 pl-6'>
                                 <h2 class="mb-6 text-sm font-bold text-gray-900 uppercase dark:text-white">Quick Links</h2>
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium text-sm">
                                     <li class="mb-4">
@@ -36,7 +38,7 @@ const Footer = () => {
 
                                 </ul>
                             </div>
-                            <div>
+                            <div className='border-[#F58E22] border-l-2 pl-6'>
                                 <h2 class="mb-6 text-sm font-bold text-gray-900 uppercase dark:text-white">SUPPORT</h2>
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium text-sm flex flex-col items-start">
                                     <li class="mb-4">
@@ -57,6 +59,12 @@ const Footer = () => {
                                         shjhfzops@sahelshipping.ae
                                         </div>
                                     </li>
+                                    <li class="mb-4">
+                                        <div className='flex gap-2 justify-center items-center'>
+                                        <FaLocationDot />                                       
+                                         LOB-6(21)Hamriyah FreeZone Phase 1
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -64,7 +72,7 @@ const Footer = () => {
                     </div>
                     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                     <div class="sm:flex sm:items-center sm:justify-between">
-                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">AL SAHEL AL SAREEHA™</a>. All Rights Reserved.
+                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <Link className='hover:underline' to="/">AL SAHEL AL SAREEHA™</Link>.  All Rights Reserved.
                         </span>
                         <div class="flex mt-4 sm:justify-center sm:mt-0">
                             <a class="text-gray-500 hover:text-gray-900 dark:hover:text-white">

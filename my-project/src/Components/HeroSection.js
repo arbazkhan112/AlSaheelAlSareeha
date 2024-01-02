@@ -1,13 +1,61 @@
 import React from 'react'
+import HPcomponent from './HPcomponent'
 
 const HeroSection = () => {
     return (
         <div>
-            <div className='flex flex-col gap-10 m-20 items-center justify-center'>
+            <div className='flex flex-col gap-10 m-10 my-14 items-center justify-center lg:m-20 md:m-16'>
 
-                <h1 className=' text-5xl font-semibold text-[#F58E22]'>WELCOME TO AL SAHEL AL SAREEHA</h1>
+                <h1 className=' text-3xl font-semibold text-[#F58E22] md:text-3xl lg:text-5xl'>WELCOME TO AL SAHEL AL SAREEHA</h1>
 
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quod voluptatum, aperiam sint qui vel corrupti quas quam libero, sed necessitatibus, explicabo repudiandae. Officia, inventore. Expedita pariatur, cupiditate, amet harum exercitationem non placeat ipsum numquam iusto quae laboriosam. Quasi aliquid assumenda voluptas, maiores qui in enim nulla architecto, placeat perspiciatis tempore provident cum quaerat dolore similique amet soluta, optio ipsa impedit rem suscipit officia itaque. Aliquid, eius esse! Ullam asperiores minima quisquam quod libero nesciunt eum magnam. Doloribus ducimus cumque accusantium est consequatur eius enim quis a voluptate reprehenderit, quas eligendi corrupti illum error sequi similique! Officia fugiat eaque maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione rem, sed inventore repellendus sequi facilis, ab quas omnis neque nam quibusdam culpa eligendi, aliquid beatae eos veniam. Dolorum magni illum excepturi eaque sed obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in exercitationem molestiae, aliquid sint ex saepe doloremque. Error, et. Asperiores earum natus placeat, sapiente laudantium architecto similique doloremque. Nobis praesentium laborum voluptate expedita pariatur.</p>
+                <div className='flex flex-col justify-start items-start'>
+                    <HPcomponent heading={"OUR STROY"} paragraph={"In the heart of the UAE's vibrant business scene, we are a dynamic team of young and tech-savvy entrepreneurs. Specializing in logistics and custom clearance, we are committed to enhancing business growth through streamlined supply chain management. Our focus on innovation and expertise ensures that we deliver precise solutions for the evolving needs of businesses in the region."} />
+
+                    <HPcomponent heading={"OUR VISION"} paragraph={"Pioneering seamless global logistics solutions, our goal is to lead innovation in clearance services, propelling both operational efficiency and client business growth throughout the UAE and beyond."} />
+
+                    <HPcomponent heading={"OUR MISSION"} paragraph={"Our mission is to transform global logistics through cutting-edge clearance services, driving operational efficiency and enabling client business growth worldwide."} />
+
+                </div>
+
+
+
+                {/* <div className='flex flex-col gap-3 mt-16'>
+
+                    <h2 class="text-2xl font-bold border-b-2 border-[#F58E22] dark:text-white">OUR STROY</h2>
+
+                    <p className='text-xs md:text-base'>In the heart of the UAE's vibrant business scene, we are a dynamic team of young and tech-savvy entrepreneurs. Specializing in logistics and custom clearance, we are committed to enhancing business growth through streamlined supply chain management. Our focus on innovation and expertise ensures that we deliver precise solutions for the evolving needs of businesses in the region.</p>
+                </div>
+
+
+
+                <div className='flex flex-col gap-3 mt-10'>
+
+                    <h2 class="text-2xl font-bold border-b-2 border-[#F58E22] dark:text-white">OUR VISION</h2>
+
+                    <p className='text-xs md:text-base'>Pioneering seamless global
+                        logistics solutions, our goal is to
+                        lead innovation in clearance
+                        services, propelling both
+                        operational efficiency and client
+                        business growth throughout
+                        the UAE and beyond.</p>
+                </div>
+
+                <div className='flex flex-col gap-3 mt-10'>
+
+                    <h2 class="text-2xl font-bold border-b-2 border-[#F58E22] dark:text-white">OUR MISSION</h2>
+
+                    <p className='text-xs md:text-base'>Our mission is to transform
+                        global logistics through
+                        cutting-edge clearance
+                        services, driving operational
+                        efficiency and enabling client
+                        business growth worldwide.</p>
+                </div>
+ */}
+
+
+
             </div>
         </div>
     )

@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from './Card'
-import CardBlack from './CardBlack'
 
 const Whyus = () => {
     return (
@@ -10,7 +9,7 @@ const Whyus = () => {
                 <h1 className='text-4xl font-bold mx-24 text-center '>WHY CHOOSE US?</h1>
 
 
-                <div className='flex flex-col items-center justify-center mx-14 my-8  gap-24 sm:flex-row '>
+                <div className='flex flex-col items-center justify-center mx-14 mt-10  gap-10 sm:flex-row sm:gap-24'>
                     <div>
                         <Card heading={"Industry Transformation"} paragraph={"We aspire to redefine the landscape ofglobal logistics through continuous innovation and a dedication to excellence."} />
                     </div>
@@ -19,7 +18,7 @@ const Whyus = () => {
                     </div>
 
                 </div>
-                <div className='flex flex-col items-center justify-center mx-14 my-8  gap-24 sm:flex-row  '>
+                <div className='flex flex-col items-center justify-center mx-14 mt-10  gap-10 sm:flex-row sm:gap-24 md:gap-14 '>
                     <div>
                         <Card heading={"Innovative Solutions"} paragraph={"We lead the industry with cutting-edge global logistics solutions, ensuring seamless supply chain operations"} />
                     </div>

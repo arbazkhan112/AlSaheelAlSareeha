@@ -1,15 +1,15 @@
 import React from 'react'
 import image1 from "../Assets/Images/Hero2.jpg";
 import image2 from "../Assets/Images/Hero3.jpg";
-
 const ABoutUsHero = () => {
   return (
     <>
-        <section class="flex items-center bg-gray-100 lg:h-screen font-poppins dark:bg-gray-900 ">
+        <section class="flex items-center justify-between bg-gray-100 lg:h-screen font-poppins dark:bg-gray-900 ">
         <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-0">
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2">
                 <div class="bg-white rounded-lg shadow-md dark:bg-gray-800">
                     <a href="" class="">
+                        
                         <img src={image1} alt=""
                             class="object-cover w-full h-64 rounded-t-lg"/>
                     </a>

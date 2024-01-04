@@ -30,14 +30,14 @@ const AboutUsComponent = () => {
                         <div class="w-full px-6 mb-10 lg:w-1/2 lg:mb-0 ">
                             <div class="pl-4 mb-6 border-l-4 border-[#F58E22] ">
                                 <span class="text-sm text-gray-600 uppercase dark:text-gray-400">Who we are?</span>
-                                <h1 class="mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300">
+                                <h1 class="mt-2 text-3xl font-black text-gray-900 md:text-5xl dark:text-gray-300">
                                     About Us
                                 </h1>
                             </div>
                             <p class="mb-6 text-base leading-7 text-gray-500 dark:text-gray-400">
                             Welcome to Al Sahel Al Sareeha, a pioneering force in the heart of the UAE's vibrant business landscape. Born out of the collective vision of a dynamic team of young and tech-savvy entrepreneurs, we have established ourselves as industry leaders, specializing in logistics and custom clearance.
                             </p>
-                            <Link to="AboutUs" class="px-4 py-2 text-gray-100 bg-[#F58E22] rounded dark:bg-blue-400 dark:hover:bg-blue-500 hover:bg-[#F58E22">Learn more</Link>
+                            <Link to="AboutUs" class="px-4 py-2 hover:bg-[#f58f22c2] text-gray-100 bg-[#F58E22] rounded dark:bg-blue-400 dark:hover:bg-blue-500 hover:bg-[#F58E22">Learn more</Link>
                            
                         </div>
                     </div>

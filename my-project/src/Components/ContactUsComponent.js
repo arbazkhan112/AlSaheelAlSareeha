@@ -4,14 +4,14 @@ const ContactUsComponent = () => {
     return (
         <>
 
-            <section class="flex items-center bg-zinc-100 font-poppins dark:bg-gray-800 ">
+            <section class="flex items-center  font-poppins dark:bg-gray-800 ">
                 <div class="max-w-6xl px-4 py-4 mx-auto lg:py-11 md:px-6">
                     <div class="mb-20 text-center pb-7">
                         <h2 class="pb-2 mb-2 text-xl font-bold text-[gray-800] md:text-4xl dark:text-gray-300">
                             Let's Stay Connected
                         </h2>
                         <p class="text-sm text-gray-600 dark:text-gray-400">
-                        LET'S GROW WITH US
+                        GROW WITH US
                         </p>
                     </div>
                     <div class="flex flex-wrap mb-6">

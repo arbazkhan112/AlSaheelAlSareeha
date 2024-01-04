@@ -5,6 +5,7 @@ import HeroSection from '../Components/HeroSection';
 import Footer from '../Components/Common/Footer';
 import Whyus from '../Components/Whyus';
 import AboutUsComponent from '../Components/AboutUsComponent';
+import HomeHeading from '../Components/HomeHeading';
 
 const Home = () => {
   return (

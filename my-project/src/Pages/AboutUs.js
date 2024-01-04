@@ -4,6 +4,7 @@ import Footer from '../Components/Common/Footer';
 import bgimage from "../Assets/Images/1.1.jpg";
 import BGImageComponent from '../Components/BGImageComponent';
 import ABoutUsHero from '../Components/ABoutUsHero';
+import AboutUsHero2 from '../Components/AboutUsHero2';
 
 const AboutUs = () => {
     return (
@@ -22,6 +23,7 @@ const AboutUs = () => {
 
                 <BGImageComponent text="Home &gt; About Us" heading="ABOUT US" image={bgimage}/>
                 <ABoutUsHero/>
+                <AboutUsHero2/>
                 
             </div>
             <Footer />

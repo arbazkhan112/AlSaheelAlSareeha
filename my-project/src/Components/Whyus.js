@@ -10,7 +10,7 @@ const Whyus = () => {
     return (
         <>
 
-            <div className='my-32 bg-[#F58E22] py-10'>
+            <div className='mb-32 bg-[#F58E22] py-10'>
                 <h1 className='text-4xl font-bold mx-24 text-center '>WHY CHOOSE US?</h1>
 
 

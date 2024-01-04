@@ -1,53 +1,37 @@
 import React from 'react'
-import image1 from "../Assets/Images/Hero2.jpg";
-import image2 from "../Assets/Images/Hero3.jpg";
+import image1 from "../Assets/Images/Hero5.jpg";
+import image2 from "../Assets/Images/Hero4.jpg";
+import Boldtext from './Boldtext';
 const ABoutUsHero = () => {
-  return (
-    <>
-        <section class="flex items-center justify-between bg-gray-100 lg:h-screen font-poppins dark:bg-gray-900 ">
-        <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-0">
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2">
-                <div class="bg-white rounded-lg shadow-md dark:bg-gray-800">
-                    <a href="" class="">
-                        
-                        <img src={image1} alt=""
-                            class="object-cover w-full h-64 rounded-t-lg"/>
-                    </a>
-                    <div class="p-5">
-                        <a href="" class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-300">
-                            Community hub
-                        </a>
-                        <p class="mt-3 mb-4 font-normal text-gray-700 dark:text-gray-400">
-                            lorem ipsum dor amit isoeirspus soiduitrsas orem ipsum dor ami
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-200 bg-blue-700 rounded-lg hover:bg-blue-800 dark:hover:bg-blue-800">
-                            Read more</a>
+    return (
+        <>
+            <div>
+
+                <section class="bg-white dark:bg-gray-900">
+                    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                        <div class="font-normal  text-gray-900 sm:text-lg ">
+                            <p class="text-base font-semibold leading-7 text-[#F58E22]">About Us</p>
+                            <h2 class="mb-4 text-4xl tracking-tight font-extrabold  ">Transforming Global Logistics with Innovation and Expertise</h2>
+                            <p class="my-6" >Welcome to <Boldtext bold={"Al Sahel Al Sareeha"}/>, a dynamic force at the heart of the UAE's thriving business landscape. Nestled amid the energy of this vibrant region, we are a team of young and tech-savvy entrepreneurs dedicated to revolutionizing the field of logistics and custom clearance. Our commitment lies in fostering business growth through the seamless management of supply chains.</p>
+                            <p className='my-6'>With specialization in logistics and custom clearance, we pride ourselves on being at the forefront of innovation, utilizing our expertise to provide precise solutions that cater to the evolving needs of businesses in the region.</p>
+                            <p className='my-6'>At <Boldtext bold={"Al Sahel Al Sareeha"}/>, we are pioneers in crafting seamless global logistics solutions. Our primary goal is to lead the way in innovation when it comes to clearance services, propelling operational efficiency and fostering client business growth not only throughout the UAE but beyond borders.</p>
+                            <p className='my-6'>Driven by a mission to transform global logistics, we strive to achieve this through cutting-edge clearance services. Our aim is to be a driving force behind operational efficiency, enabling the growth of client businesses on a worldwide scale.</p>
+                            <p className='my-6'>Join us on this journey as we redefine the landscape of logistics and custom clearance, setting new standards and paving the way for operational excellence. At <Boldtext bold={"Al Sahel Al Sareeha"}/>, we don't just deliver goods; we deliver precision, innovation, and growth.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <img class="w-full rounded-lg" src={image1} alt="office content 1" />
+                            <img class="mt-4 w-full lg:mt-10 rounded-lg" src={image2} alt="office content 2" />
+                        </div>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md dark:bg-gray-800">
-                    <a href="" class="">
-                        <img src={image2} alt=""
-                            class="object-cover w-full h-64 rounded-t-lg"/>
-                    </a>
-                    <div class="p-5">
-                        <a href="" class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-300">
-                            Awars and reputation
-                        </a>
-                        <p class="mt-3 mb-4 font-normal text-gray-700 dark:text-gray-400">
-                            lorem ipsum dor amit isoeirspus soiduitrsas orem ipsum dor ami
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-200 bg-blue-700 rounded-lg hover:bg-blue-800 dark:hover:bg-blue-800">
-                            Read more</a>
-                    </div>
-                </div>
-              
+                </section>
+
+
+
+               
+
             </div>
-        </div>
-    </section>
-    </>
-  )
+        </>
+    )
 }
 
 export default ABoutUsHero

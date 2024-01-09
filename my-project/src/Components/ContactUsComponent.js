@@ -1,6 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const ContactUsComponent = () => {
+
+    const [formData, setFormData] = useState({
+        FirstName: '',
+        LastName: '',
+        Email: '',
+        Subject: '',
+        Message: '',
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:5000/sendMail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert('Email sent successfully');
+                // Optionally, you can reset the form fields here
+                setFormData({
+                    FirstName: '',
+                    LastName: '',
+                    Email: '',
+                    Subject: '',
+                    Message: '',
+                });
+            } else {
+                alert('Failed to send email');
+            }
+        } catch (error) {
+            alert('Error occurred while sending email', error);
+        }
+    };
+
     return (
         <>
 
@@ -11,7 +56,7 @@ const ContactUsComponent = () => {
                             Let's Stay Connected
                         </h2>
                         <p class="text-sm text-gray-600 dark:text-gray-400">
-                        GROW WITH US
+                            GROW WITH US
                         </p>
                     </div>
                     <div class="flex flex-wrap mb-6">
@@ -66,46 +111,73 @@ const ContactUsComponent = () => {
                         </div>
                     </div>
                     <div class="px-3 py-6 ">
-                        <form action="" class="py-6 rounded shadow dark:bg-gray-900 bg-gray-50">
+                        <form onSubmit={handleSubmit} class="py-6 rounded shadow dark:bg-gray-900 bg-gray-50">
                             <div class="flex flex-wrap ">
                                 <div class="w-full px-3 md:w-1/2 md:mb-4">
-                                    <label for="firstname"
+                                    <label for="FirstName"
                                         class="block mb-3 font-bold text-gray-700 uppercase dark:text-gray-400">
                                         First Name
                                     </label>
-                                    <input type="text" placeholder="first name" required
+                                    <input type="text"
+                                        name="FirstName"
+                                        placeholder="First name"
+                                        value={formData.FirstName}
+                                        onChange={handleChange}
                                         class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100  border rounded lg:mb-0 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 focus:border-[#F58E22]  hover:border-[#F58E22] outline-none" />
                                 </div>
                                 <div class="w-full px-3 md:w-1/2 md:mb-4">
-                                    <label for="firstname"
+                                    <label for="LastName"
                                         class="block mb-3 font-bold text-gray-700 uppercase dark:text-gray-400">
                                         Last Name</label>
-                                    <input type="text" placeholder="last name" required
+                                    <input type="text"
+                                        name="LastName"
+                                        placeholder="Last name"
+                                        value={formData.LastName}
+                                        onChange={handleChange}
+                                        required
                                         class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border rounded dark:placeholder-gray-500 lg:mb-0 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 outline-none focus:border-[#F58E22]  hover:border-[#F58E22]" />
                                 </div>
                                 <div class="w-full px-3 md:w-1/2 md:mb-0">
-                                    <label for="firstname"
+                                    <label for="Email"
                                         class="block mb-3 font-bold text-gray-700 uppercase dark:text-gray-400">
                                         Email</label>
-                                    <input type="email" placeholder="abc@gmail.com" required
+                                    <input type="email"
+                                        name="Email"
+                                        placeholder="Email"
+                                        value={formData.Email}
+                                        onChange={handleChange}
+                                        required
                                         class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 focus:border-[#F58E22]  hover:border-[#F58E22]" />
                                 </div>
                                 <div class="w-full px-3 md:w-1/2 md:mb-0">
-                                    <label for="firstname"
+                                    <label for="Subject"
                                         class="block mb-3 font-bold text-gray-700 uppercase dark:text-gray-400">
                                         Subject</label>
-                                    <input type="text" placeholder="I'm asking information for..." required
+                                    <input type="text"
+                                        name="Subject"
+                                        value={formData.Subject}
+                                        onChange={handleChange}
+                                        placeholder="I'm asking information for..."
+                                        required
                                         class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 focus:border-[#F58E22]  hover:border-[#F58E22]" />
                                 </div>
                             </div>
-                            <div class="px-3 mb-6">
-                                <label for="firstname" class="block mb-3 font-bold text-gray-700 uppercase dark:text-gray-400">
-                                    Message</label>
-                                <textarea type="message" placeholder="Describe your problem" required
-                                    class="block w-full px-4 py-10 leading-tight text-gray-700 bg-gray-100 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 focus:border-[#F58E22]  hover:border-[#F58E22]"></textarea>
+                            <div class="w-full px-3 mb-6">
+                                <label htmlFor="Message" class="block mb-3 font-bold text-gray-700 uppercase dark:text-gray-400">
+                                    Message
+                                </label>
+                                <textarea
+                                    name="Message"
+                                    placeholder="Describe your problem"
+                                    value={formData.Message}
+                                    onChange={handleChange}
+                                    required
+                                    class="block w-full px-4 py-10 leading-tight text-gray-700 bg-gray-100 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 focus:border-[#F58E22]  hover:border-[#F58E22]"
+                                ></textarea>
                             </div>
                             <div class="px-6">
                                 <button
+                                    type="submit"
                                     class="px-4 py-2 font-medium text-gray-100 bg-[#F58E22] rounded shadow hover:bg-yellow-700 dark:bg-[#F58E22] dark:hover:bg-yellow-700">
                                     Send Message
                                 </button>

@@ -6,7 +6,8 @@ import Home from "./Pages/Home";
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 import AboutUs from './Pages/AboutUs';
 import Services from './Pages/Services';
@@ -23,6 +24,7 @@ root.render(
         <Route path="/Services" element={<Services/>}></Route>
         <Route path="/ContactUs" element={<ContactUs/>}></Route>
         <Route path="/FAQs" element={<FAQs/>}></Route>
+        <Route path="/*" element={<Navigate to="/"/>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

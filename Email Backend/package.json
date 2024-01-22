@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "index.js"
+    "test": "index.js",
+    "start": "index.js"
   },
+ 
+  
   "author": "",
   "license": "ISC",
   "dependencies": {

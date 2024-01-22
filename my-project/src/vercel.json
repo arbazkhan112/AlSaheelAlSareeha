@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "routes": [
+      { "src": "/(about-us|services|contact-us|faqs)", "dest": "/index.html" },
+      { "src": "/.*", "status": 404, "dest": "/index.html" }
+    ],
+    "rewrites": [
+      { "source": "/index.html", "destination": "/index.html" }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [
+      { "source": "/(about-us|services|contact-us|faqs)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] }
+    ]
+  }
+  
